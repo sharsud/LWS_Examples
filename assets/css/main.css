@@ -4028,7 +4028,7 @@ input, select, textarea {
   opacity: 0.5;
 }
 
-.grid:hover .grid-item:hover {
+.grid-item:hover {
   opacity: 1;
 }
 

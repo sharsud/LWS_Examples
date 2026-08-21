@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Child Window Demo - Learn with Psudo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <style>
+        body {
+            background: #1a1a1a;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            padding: 2em;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2em;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="color: #2e5c87;">🚀 Child Window / Tab</h2>
+        <p>This is a dedicated child window opened from the main windows page.</p>
+        
+        <div style="margin: 1.5em 0;">
+            <label for="popupInput">Input Field in Child Window:</label>
+            <input type="text" id="popupInput" placeholder="Type text here..." style="padding: 0.6em; width: 100%; max-width: 400px; background: #2a2a2a; border: 1px solid #444; color: white; border-radius: 4px;">
+        </div>
+
+        <button id="closeChildBtn" onclick="window.close()" class="button primary" style="background: #dc3545; color: white; border: none; padding: 0.6em 1.2em; border-radius: 4px; cursor: pointer;">Close Window</button>
+    </div>
+</body>
+</html>

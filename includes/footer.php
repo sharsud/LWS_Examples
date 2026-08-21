@@ -7,7 +7,8 @@
         <li><a href="learnwithpsudo@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
     </ul>
     <ul class="copyright">
-        <li>&copy; LWS Learn with PSUDO</li><li>Linkedin: <a href="https://www.linkedin.com/in/sudhanshu-sharma/" target="Window">Linkedin</a></li>
+        <li>Curated with ❤️ by <a href="https://www.about.learnwithpsudo.com/" target='blank'>Sudhanshu</a> for <a href="https://www.learnwithpsudo.com/" target='blank'> LWS<sup>&copy;</sup>-Learn with PSUDO</a></li>
+		<li>Linkedin: <a href="https://www.linkedin.com/in/sudhanshu-sharma/" target="Window">Linkedin</a></li>
     </ul>
 </footer>
 

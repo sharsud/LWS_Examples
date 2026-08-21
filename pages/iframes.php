@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="../assets/css/main.css" />
     <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+         <link rel="canonical" href="https://examples.learnwithpsudo.com/pages/iframes.php" />
     <style>
         .frame-demo {
             background: rgba(255, 255, 255, 0.05);

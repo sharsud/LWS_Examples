@@ -6,8 +6,7 @@
     <link rel="shortcut icon" href="images/logo.ico" />
 	<link rel="icon" href="images/logo.ico" type="image/x-icon"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-<link rel="stylesheet" href="assets/css/main.css" />
-<link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <link rel="canonical" href="https://examples.learnwithpsudo.com/" />
     
@@ -31,61 +30,67 @@
                         <div class="grid-item item1">
                             <div class="content"> Multiple web elements using different locators</div>
                             <div class="overlay">
-<a href="pages\webElements.php" data-testid="link-web-elements" >Web Elements & Locators</a>
+                                <a href="pages\webElements.php" >Web Elements & Locators</a>
                             </div>
                         </div>
                         <div class="grid-item item2">
                             <div class="content"> Use login page to fill fields and handle alert</div>
                             <div class="overlay">
-<a href="pages\login.php" data-testid="link-login" >Login Page</a>
+                                <a href="pages\login.php" >Login Page</a>
                             </div>
                         </div>
                         <div class="grid-item item3">
                             <div class="content">Use this to practice demo on class locators</div>
                             <div class="overlay">
-<a href="pages\classLocatorsdemo.php" data-testid="link-css-locators" >CSS Locators</a>
+                                <a href="pages\classLocatorsdemo.php" >CSS Locators</a>
                             </div>
                         </div>
                         <div class="grid-item item4">
                             <div class="content"> Use this to practice demo on xpath locators</div>
                             <div class="overlay">
-<a href="pages\xpathdemo.php" data-testid="link-xpath-locators" >Xpath Locators</a>
+                                <a href="pages\xpathdemo.php" >Xpath Locators</a>
                             </div>
                         </div>
                         <div class="grid-item item5">
                             <div class="content">Use this to practice demo on relative locators</div>
                             <div class="overlay">
-<a href="pages\relativeLoc.php" data-testid="link-relative-locators" >Relative Locators</a>
+                                <a href="pages\relativeLoc.php" >Relative Locators</a>
                             </div>
                         </div>
                         <div class="grid-item item6">
                             <div class="content"> Use this to practice demo on Browser Navigations and element state</div>
                             <div class="overlay">
-<a href="pages\BrNavBasic.php" data-testid="link-browser-navigations" >Browser Navigations</a>
+                                <a href="pages\BrNavBasic.php" >Browser Navigations</a>
                             </div>
                         </div>
                         <div class="grid-item item7">
                             <div class="content"> Use this to practice demo on Radio Buttons and checkboxes</div>
                             <div class="overlay">
-<a href="pages\chkboxdemo.php" data-testid="link-radio-checkboxes" >Elements-Radio & Checkboxes</a>
+                                <a href="pages\chkboxdemo.php" >Elements-Radio & Checkboxes</a>
                             </div>
                         </div>
                         <div class="grid-item item8">
                             <div class="content"> Use this to practice demo on Dropdown and alerts </div>
                             <div class="overlay">
-<a href="pages\dropAlert.php" data-testid="link-dropdown-alerts" >Dropdown & Alerts</a>
+                                <a href="pages\dropAlert.php" >Dropdown & Alerts</a>
                             </div>
                         </div>
 						<div class="grid-item item9">
                             <div class="content"> Use this to practice on Iframes and elements interations</div>
                             <div class="overlay">
-<a href="pages\iframes.php" data-testid="link-iframes" >Iframes</a>
+                                <a href="pages\iframes.php" >Iframes</a>
                             </div>
                         </div>
                         <div class="grid-item item10">
                             <div class="content"> Use this to practice on Window handles/switching interations</div>
                             <div class="overlay">
-<a href="pages\windowsdemo.php" data-testid="link-multi-browser" >Multi Browser</a>
+                                <a href="pages\windowsDemo.php" >Multi Browser</a>
+                            </div>
+                        </div>
+                        <div class="grid-item item1">
+                            <div class="content"> Use this to practice on mouse and Keyboard actions</div>
+                            <div class="overlay">
+                                <a href="pages\mouseKey.php" >Mouse & Keyboard</a>
                             </div>
                         </div>
                     </div>
@@ -97,6 +102,3 @@
 <?php
 include "includes/footer.php";
 ?>
-<script src="assets/js/common.js"></script>
-</body>
-</html>

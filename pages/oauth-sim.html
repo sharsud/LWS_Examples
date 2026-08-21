@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>OAuth Provider - Learn with Psudo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            background: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            padding: 2em;
+            text-align: center;
+        }
+        .login-box {
+            background: #1e1e1e;
+            padding: 2em;
+            border-radius: 8px;
+            border: 1px solid #333;
+        }
+        input {
+            width: 80%;
+            padding: 0.7em;
+            margin: 1em 0;
+            background: #2a2a2a;
+            border: 1px solid #555;
+            color: white;
+            border-radius: 4px;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 0.8em 1.5em;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h3 style="color: #ffc107;">🔑 OAuth Authentication</h3>
+        <p>Simulating external authentication flow.</p>
+        
+        <input type="text" id="oauthUsername" value="AutomationUser" placeholder="Enter username">
+        <br>
+        <button id="authBtn" onclick="authorizeAndClose()">Authorize & Login</button>
+    </div>
+
+    <script>
+        function authorizeAndClose() {
+            var username = document.getElementById('oauthUsername').value;
+            if (window.opener && !window.opener.closed) {
+                window.opener.completeOAuth(username);
+            }
+            window.close();
+        }
+    </script>
+</body>
+</html>

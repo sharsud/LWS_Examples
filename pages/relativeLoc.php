@@ -7,6 +7,7 @@
     <link rel="icon" href="../images/logo.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="../assets/css/main.css" />
+     <link rel="canonical" href="https://examples.learnwithpsudo.com/pages/relativeLoc.php" />
     <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
     <style>
     #nearMsg {

@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Terms & Conditions - Learn with Psudo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            background: #1a1a1a;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            padding: 2em;
+        }
+        .box {
+            background: #242424;
+            padding: 2em;
+            border-radius: 6px;
+            border: 1px solid #333;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .terms-content {
+            background: #1a1a1a;
+            padding: 1em;
+            border: 1px solid #444;
+            border-radius: 4px;
+            height: 120px;
+            overflow-y: scroll;
+            margin-bottom: 1.5em;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+        .checkbox-container {
+            margin: 1.5em 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+        }
+        button {
+            background: #2e5c87;
+            color: white;
+            border: none;
+            padding: 0.8em 1.5em;
+            border-radius: 4px;
+            cursor: pointer;
+            opacity: 0.6;
+        }
+        button:enabled {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h3 style="color: #ffc107;">📜 Terms of Service</h3>
+        
+        <div class="terms-content">
+            <p><strong>1. Introduction</strong><br>By accessing Learn with Psudo, you agree to write clean, maintainable, and reliable test automation scripts.</p>
+            <p><strong>2. Best Practices</strong><br>Always prefer explicit waits over fixed delays, avoid fragile locators, and ensure proper context switching across browser windows and frames.</p>
+        </div>
+
+        <!-- Checkbox inside Terms Page -->
+        <div class="checkbox-container">
+            <input type="checkbox" id="childTermsCheckbox" onchange="toggleAcceptButton()">
+            <label for="childTermsCheckbox">I have read and agree to these terms</label>
+        </div>
+
+        <button id="acceptTermsBtn" disabled onclick="acceptAndClose()">I Have Reviewed The Terms</button>
+    </div>
+
+    <script>
+        function toggleAcceptButton() {
+            var checkbox = document.getElementById('childTermsCheckbox');
+            var btn = document.getElementById('acceptTermsBtn');
+            btn.disabled = !checkbox.checked;
+        }
+
+        function acceptAndClose() {
+            // Optional: Notify opener parent window before closing
+            if (window.opener && !window.opener.closed) {
+                try {
+                    window.opener.document.getElementById('agreeCheckbox').removeAttribute('disabled');
+                } catch(e) {
+                    console.log("Parent update handled by automation script");
+                }
+            }
+            window.close();
+        }
+    </script>
+</body>
+</html>
