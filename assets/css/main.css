@@ -234,7 +234,7 @@ input, select, textarea {
 	hr {
 		border: 0;
 		border-bottom: solid 2px #fff;
-		margin: 3em 0;
+		margin: 3em 3em;
 	}
 
 		hr.major {
@@ -2425,13 +2425,14 @@ input, select, textarea {
 		letter-spacing: 0.225em;
 		line-height: 3.125em;
 		max-width: 30em;
-		padding: 0 2.75em;
+		padding: 1.75em 2.75em;
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+		margin: 20px;
 	}
 
 		input[type="submit"]:hover,
@@ -3998,219 +3999,5 @@ input, select, textarea {
 		background-color: #1d242a;
 	}
 
-	.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    width: 90%;
-    max-width: 1200px;
-  }
-
-  .grid-item {
-    display: block;
-    text-decoration: none;
-    border-radius: 12px;
-    overflow: hidden;
-    position: relative;
-    height: 150px;
-    box-shadow: 0 4px 12px rgba(46, 56, 66, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
-  }
-/*
-  .grid-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(0,255,255,0.8), 0 0 20px rgba(255,0,255,0.6);
-  z-index: 2;
-	}*/
-
-/* Dim non-hovered tiles */
-.grid:hover .grid-item {
-  opacity: 0.5;
-}
-
-.grid-item:hover {
-  opacity: 1;
-}
-
-
-  .grid-item .content {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.2rem;
-    text-align: center;
-    position: relative;
-    cursor: pointer;
-  }
-
-  .grid-item .content span {
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-    width: 100%;
-    padding: 12px;
-    background-color: rgba(46, 56, 66, 0.85); 
-    text-align: center;
-    transition: bottom 0.3s ease;
-    font-size: 1rem;
-  }
-
-  .grid-item:hover .content span {
-    bottom: 0;
-  }
-
-/* Overlay container inside grid item 
-.grid-item .overlay {
-  position: absolute;
-  bottom: -100%;                  
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: bottom 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  border-top: 1px solid rgba(0, 255, 255, 0.4); 
-  backdrop-filter: blur(4px);      
-  z-index: 1;
-}
-
-.grid-item:hover .overlay {
-  bottom: 0;
-  opacity: 1;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6), 0 0 40px rgba(0, 255, 255, 0.3);
-}
-
-.grid-item .overlay a {
-  color: #00fff7;              
-  font-weight: bold;
-  font-size: 1rem;
-  text-decoration: none;
-  text-align: center;
-  padding: 8px 16px;
-  border: 1px solid rgba(0, 255, 255, 0.6);
-  border-radius: 6px;
-  transition: color 0.3s ease, text-shadow 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-
-.grid-item .overlay a:hover {
-  color: #ff00ff; 
-  text-shadow: 0 0 8px #00fff7, 0 0 12px #00fff7;
-  box-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7, 0 0 30px #ff00ff;
-  transform: scale(1.1);
-}
-
-
-/* Vibrant Red + Soft Gradients
-.item1 { background: linear-gradient(-45deg, #00fff7, #ff00ff, #ff007f, #00fff7); background-size: 400% 400%; animation: gradientAnim1 10s ease infinite; }
-.item2 { background: linear-gradient(45deg, #39ff14, #0ff0fc, #ff00ff, #39ff14); background-size: 400% 400%; animation: gradientAnim2 12s ease-in infinite; }
-.item3 { background: linear-gradient(to right, #ff007f, #ff00ff, #7f00ff, #ff007f); background-size: 400% 400%; animation: gradientAnim3 14s ease-out infinite; }
-.item4 { background: linear-gradient(to left, #0ff0fc, #ff00ff, #ff1493, #0ff0fc); background-size: 400% 400%; animation: gradientAnim4 9s linear infinite; }
-.item5 { background: linear-gradient(to top right, #39ff14, #ff00ff, #00ffff, #39ff14); background-size: 400% 400%; animation: gradientAnim5 11s ease-in-out infinite; }
-.item6 { background: linear-gradient(135deg, #ff007f, #ff00ff, #7f00ff, #ff007f); background-size: 400% 400%; animation: gradientAnim6 13s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite; }
-.item7 { background: linear-gradient(225deg, #00fff7, #ff00ff, #ff1493, #00fff7); background-size: 400% 400%; animation: gradientAnim7 16s steps(6, end) infinite; }
-.item8 { background: linear-gradient(to top, #ff00ff, #ff007f, #39ff14, #ff00ff); background-size: 400% 400%; animation: gradientAnim8 18s ease-in infinite; }
-.item9 { background: linear-gradient(to bottom, #0ff0fc, #ff00ff, #ff1493, #0ff0fc); background-size: 400% 400%; animation: gradientAnim9 20s ease-out infinite; }
-.item10{ background: linear-gradient(-45deg, #ff007f, #ff00ff, #00fff7, #ff007f); background-size: 400% 400%; animation: gradientAnim10 22s alternate infinite; }
- */
-/* Overlay container inside grid item */
-/* Overlay container inside grid item */
-.grid-item .overlay {
-  position: absolute;
-  bottom: -100%;                  
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(25, 25, 35, 0.75);  /* dark grey/blue transparent */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: bottom 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;                       
-  border-top: 1px solid rgba(120, 120, 160, 0.3); /* subtle matching top line */
-  backdrop-filter: blur(6px);       
-  z-index: 2;
-}
-
-/* Slide overlay up and show */
-.grid-item:hover .overlay {
-  bottom: 0;
-  opacity: 1;
-  box-shadow: 0 0 20px rgba(50, 50, 120, 0.6), 0 0 40px rgba(80, 60, 140, 0.4); /* dark blue/purple glow */
-}
-
-/* Link inside overlay */
-.grid-item .overlay a {
-  color: #c0c0ff;                  /* soft light blue for contrast */
-  font-weight: bold;
-  font-size: 1rem;
-  text-decoration: none;
-  text-align: center;
-  padding: 8px 16px;
-  border: 1px solid rgba(150, 150, 200, 0.5); /* soft neon border in blue/purple shade */
-  border-radius: 6px;
-  transition: color 0.3s ease, text-shadow 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-/* Focus effect on hover */
-.grid-item .overlay a:hover {
-  color: #e0d0ff; /* subtle violet accent */
-  text-shadow: 0 0 8px #b0b0ff, 0 0 12px #d0c0ff;
-  box-shadow: 0 0 10px #b0b0ff, 0 0 20px #d0c0ff;
-  transform: scale(1.1);
-}
-
-
-/* Dark but visible animated gradients */
-.item1 { background: linear-gradient(-45deg, #0d0d0d, #2a2a3e, #503366, #0d0d0d); background-size: 400% 400%; animation: gradientAnim1 10s ease infinite; }
-.item2 { background: linear-gradient(45deg, #1f1f2f, #3c3c5a, #70388c, #1f1f2f); background-size: 400% 400%; animation: gradientAnim2 12s ease-in infinite; }
-.item3 { background: linear-gradient(to right, #2b1f3f, #5a3a6f, #874e9e, #2b1f3f); background-size: 400% 400%; animation: gradientAnim3 14s ease-out infinite; }
-.item4 { background: linear-gradient(to left, #1c1c2e, #4a3c6b, #7b4f9a, #1c1c2e); background-size: 400% 400%; animation: gradientAnim4 9s linear infinite; }
-.item5 { background: linear-gradient(to top right, #2f2f3f, #5c3f7a, #8c5aa3, #2f2f3f); background-size: 400% 400%; animation: gradientAnim5 11s ease-in-out infinite; }
-.item6 { background: linear-gradient(135deg, #3c2a4f, #6a4e8a, #9a6fb5, #3c2a4f); background-size: 400% 400%; animation: gradientAnim6 13s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite; }
-.item7 { background: linear-gradient(225deg, #1f1f30, #4a3c70, #7a5aa0, #1f1f30); background-size: 400% 400%; animation: gradientAnim7 16s steps(6, end) infinite; }
-.item8 { background: linear-gradient(to top, #2a1f3f, #5c3a7a, #8f5aa8, #2a1f3f); background-size: 400% 400%; animation: gradientAnim8 18s ease-in infinite; }
-.item9 { background: linear-gradient(to bottom, #1f1f2f, #4a3c6c, #7b5aa0, #1f1f2f); background-size: 400% 400%; animation: gradientAnim9 20s ease-out infinite; }
-.item10{ background: linear-gradient(-45deg, #2a1f3f, #5c3a7a, #8f5aa8, #2a1f3f); background-size: 400% 400%; animation: gradientAnim10 22s alternate infinite; }
-
-
-
-/* Different animation paths */
-@keyframes gradientAnim1  { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
-@keyframes gradientAnim2  { 0%{background-position:50% 0%} 50%{background-position:50% 100%} 100%{background-position:50% 0%} }
-@keyframes gradientAnim3  { 0%{background-position:0% 0%} 50%{background-position:100% 100%} 100%{background-position:0% 0%} }
-@keyframes gradientAnim4  { 0%{background-position:100% 50%} 50%{background-position:0% 50%} 100%{background-position:100% 50%} }
-@keyframes gradientAnim5  { 0%{background-position:0% 100%} 50%{background-position:100% 0%} 100%{background-position:0% 100%} }
-@keyframes gradientAnim6  { 0%{background-position:0% 50%} 25%{background-position:50% 100%} 50%{background-position:100% 50%} 75%{background-position:50% 0%} 100%{background-position:0% 50%} }
-@keyframes gradientAnim7  { 0%{background-position:0% 0%} 50%{background-position:200% 200%} 100%{background-position:0% 0%} }
-@keyframes gradientAnim8  { 0%{background-position:50% 50%} 25%{background-position:0% 100%} 50%{background-position:100% 50%} 75%{background-position:0% 0%} 100%{background-position:50% 50%} }
-@keyframes gradientAnim9  { 0%{background-position:100% 0%} 50%{background-position:0% 100%} 100%{background-position:100% 0%} }
-@keyframes gradientAnim10 { 0%{background-position:0% 0%} 25%{background-position:100% 0%} 50%{background-position:100% 100%} 75%{background-position:0% 100%} 100%{background-position:0% 0%} }
-
- .overlay {
-      position: absolute;
-      inset: 0;
-      background-color: rgba(116, 114, 0, 0.658);
-      opacity: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      font-size: 1.2rem;
-      font-weight: 500;
-      transition: opacity 0.3s ease;
-      z-index: 10;
-	  text-align: center;    
-	  padding: 10px;
-    }
-	.grid-item:hover .overlay {
-  opacity: 1;
-}
+/* Home grid, overlays, and project heroes live in assets/css/home.css */
 

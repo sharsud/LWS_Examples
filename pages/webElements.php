@@ -1,14 +1,8 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Registration - Learn with Psudo | Python, Automation & Selenium Tutorials</title>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" href="../images/logo.ico" />
-	<link rel="icon" href="../images/logo.ico" type="image/x-icon"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-     <link rel="canonical" href="https://examples.learnwithpsudo.com/pages/webElements.php" />
+<?php
+$lwsBase = '../';
+$pageTitle = 'Registration - Learn with Psudo | Python, Automation & Selenium Tutorials';
+$pageCanonical = 'https://examples.learnwithpsudo.com/pages/webElements.php';
+$extraHead = <<<'HTML'
     <script>
     function openPopup(name) {
         document.getElementById("popupMessage").innerText = `Hello, ${name}!`;
@@ -21,13 +15,9 @@
         document.getElementById("overlay").style.display = "none";
     }
 </script>
-
-</head>
-<body class="landing">
-    <div id="page-wrapper">
-	<?php
-	include "../includes/generic_header.php";
-	?>
+HTML;
+require_once dirname(__DIR__) . '/includes/header.php';
+?>
 	<article id="main">
 		<header>
 			<h2>Selenium Demo </h2>
@@ -35,9 +25,10 @@
 		</header>
 		<section class="wrapper style5">
 			<div class="inner">
-					<div style="display: flex; justify-content: space-between; align-items: center;">
-                        <h2>Student Registration</h2>
-                        <div>
+				<div class="page-section">
+					<div class="flex justify-between items-center mb-4">
+                        <h2>📝 Student Registration</h2>
+                        <div class="flex gap-2">
                             <a href="#" class="button small" onclick="openPopup('Guest')">Hello, Guest</a>
                             <a href="#" class="button small" onclick="openPopup('Psudo')">Hello, Psudo</a>
                             <a href="#" class="button small" onclick="openPopup('Admin')">Hello, Admin</a>
@@ -45,13 +36,14 @@
                     </div>
 
                     <!-- Popup Modal -->
-                    <div id="namePopup" class="modal" style="display:none; position:fixed; top:30%; left:50%; transform:translate(-50%,-50%); background:white; padding:20px; box-shadow:0px 0px 10px rgba(0,0,0,0.4); z-index:999;">
+                    <div id="namePopup" class="modal" style="display:none; position:fixed; top:30%; left:50%; transform:translate(-50%,-50%); background:white; padding:20px; box-shadow:0px 0px 10px rgba(0,0,0,0.4); z-index:999; border-radius: 8px;">
                         <p id="popupMessage">Hello!</p>
                         <button onclick="closePopup()" class="button small">Close</button>
                     </div>
                     <div id="overlay" style="display:none; position:fixed; top:0; left:0; height:100vh; width:100vw; background:rgba(0,0,0,0.4); z-index:998;" onclick="closePopup()"></div>
+                </div>
 
-          
+				<div class="page-section">
 					<form id="registrationForm" name="registrationForm" method="post" action="#">
 					<div class="fields">
 
@@ -160,13 +152,28 @@
 
 					<!-- Login Link -->
 					<p>Already registered? 
-					  <a href="https://examples.learnwithpsudo.com/pages/login.php" id="loginLink">Click here to log in</a> OR <a href="https://examples.learnwithpsudo.com/pages/login.php" id="loginLink">Log In</a>
+					  <a href="https://examples.learnwithpsudo.com/pages/login.php" id="loginLink">Click here to log in</a> OR <a href="https://examples.learnwithpsudo.com/pages/login.php" id="loginLink2">Log In</a>
 					</p>
 
 				</form>
+				</div>
+
+				<div class="page-section">
+					<h3>📋 Selenium Practice Information</h3>
+					<div class="code-info">
+						<p><strong>Common Locators:</strong></p>
+						<ul>
+							<li><code>driver.find_element(By.ID, "firstName")</code></li>
+							<li><code>driver.find_element(By.NAME, "email")</code></li>
+							<li><code>driver.find_element(By.CSS_SELECTOR, "input[type='radio']")</code></li>
+							<li><code>driver.find_element(By.XPATH, "//input[@type='checkbox']")</code></li>
+							<li><code>driver.find_element(By.ID, "submitBtn")</code></li>
+						</ul>
+					</div>
+				</div>
+
 			</div>
 		</section>
 	</article>
 <?php
-include "../includes/generic_footer.php";
-?>
+require_once dirname(__DIR__) . '/includes/footer.php';

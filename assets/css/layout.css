@@ -1,0 +1,174 @@
+/* Shared chrome for header, page banners, content panels, and footer */
+
+body.landing,
+body {
+	font-family: Inter, "Open Sans", Helvetica, sans-serif;
+	background: #f8fafc;
+	color: #0f172a;
+	letter-spacing: 0;
+}
+
+#header,
+#header.alt {
+	background: rgba(255, 255, 255, 0.94) !important;
+	border-bottom: 1px solid #e2e8f0;
+	height: 4.25rem;
+	line-height: 4.25rem;
+	box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+}
+
+#header.alt h1 {
+	opacity: 1 !important;
+	pointer-events: auto !important;
+}
+
+#header h1 {
+	left: 1rem;
+	max-width: calc(100% - 6rem);
+}
+
+#header h1 a,
+#header h1 a.lws-brand-link {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	border: 0;
+	color: #0f172a;
+	height: 4.25rem;
+	line-height: 1.15;
+}
+
+.lws-brand-copy {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.lws-brand-name {
+	font-size: 0.9rem;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+	text-transform: none;
+}
+
+.lws-brand-tag {
+	font-size: 0.65rem;
+	font-weight: 500;
+	color: #64748b;
+	letter-spacing: 0.02em;
+	text-transform: none;
+}
+
+#header nav > ul > li > a {
+	color: #334155 !important;
+	letter-spacing: 0.08em;
+}
+
+#header nav > ul > li > a.menuToggle:after {
+	filter: invert(0.35);
+}
+
+#main > header {
+	padding: 7.5rem 1.5rem 3.5rem !important;
+	background-image: none !important;
+	background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 48%, #0c4a6e 100%) !important;
+	text-align: center;
+}
+
+#main > header h2,
+#main > header p {
+	color: #fff !important;
+}
+
+#main > header h2 {
+	letter-spacing: -0.02em;
+	text-transform: none;
+}
+
+#main > header p {
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: #c7d2fe !important;
+	font-size: 0.8rem;
+}
+
+.wrapper.style5 {
+	background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%) !important;
+	color: #334155 !important;
+}
+
+.wrapper.style5 .inner {
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
+	border-radius: 1rem;
+	box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+	padding: 2rem 1.75rem;
+	max-width: 72em;
+}
+
+.wrapper.style5 h3,
+.wrapper.style5 h4,
+.wrapper.style5 label {
+	color: #0f172a;
+}
+
+.wrapper.style5 .frame-demo,
+.wrapper.style5 .window-demo,
+.wrapper.style5 .frame-container,
+.wrapper.style5 .window-container {
+	background: #f8fafc;
+	border: 1px solid #e2e8f0;
+	color: #334155;
+}
+
+.wrapper.style5 .frame-info,
+.wrapper.style5 .window-info,
+.wrapper.style5 .code-snippet,
+.wrapper.style5 .frame-hierarchy {
+	background: #eef2ff;
+	border-color: #c7d2fe;
+	color: #334155;
+}
+
+.wrapper.style5 pre,
+.wrapper.style5 code {
+	background: #f1f5f9;
+	color: #0f172a;
+}
+
+.wrapper.style5 .element-block {
+	padding-bottom: 1.5rem;
+	border-bottom: 1px solid #e2e8f0;
+	margin-bottom: 1.5rem;
+
+	margin-top: 1.5rem;
+}
+
+#footer {
+	background: #0f172a !important;
+	color: #cbd5e1;
+	padding: 3.5em 0 2.5em;
+}
+
+#footer .copyright,
+#footer .icons {
+	color: #94a3b8;
+}
+
+#footer a {
+	color: #c7d2fe;
+}
+
+@media screen and (max-width: 736px) {
+	.lws-brand-tag {
+		display: none;
+	}
+
+	#main > header {
+		padding: 6rem 1.25rem 2.5rem !important;
+	}
+
+	.wrapper.style5 .inner {
+		padding: 1.25rem;
+	}
+}

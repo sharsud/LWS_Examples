@@ -1,70 +1,65 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Multiple Windows & Tabs Demo - Learn with Psudo</title>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" href="../images/logo.ico" />
-    <link rel="icon" href="../images/logo.ico" type="image/x-icon"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-    <link rel="canonical" href="https://examples.learnwithpsudo.com/pages/windows.php" />
-    <style>
-        .window-demo {
+<?php
+$lwsBase = '../';
+$pageTitle = 'Multiple Windows & Tabs Demo - Learn with Psudo';
+$pageCanonical = 'https://examples.learnwithpsudo.com/pages/windows.php';
+
+$extraHead = <<<'HTML'
+<style>
+.window-demo {
             background: rgba(255, 255, 255, 0.05);
-            border-radius: 4px;
-            padding: 2em;
-            margin: 2em 0;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .window-container {
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 4px;
+            border-radius: 8px;
             padding: 1.5em;
             margin: 1.5em 0;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
+        .window-container {
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 6px;
+            padding: 1.25em;
+            margin: 1.25em 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
         .window-header {
             border-bottom: 2px solid #2e5c87;
-            padding-bottom: 1em;
+            padding-bottom: 0.75em;
             margin-bottom: 1em;
         }
         
         .window-info {
-            background: rgba(46, 92, 135, 0.2);
-            padding: 1em;
+            background: rgba(46, 92, 135, 0.15);
+            padding: 0.875em;
             border-radius: 4px;
-            margin: 1em 0;
+            margin: 0.875em 0;
             border-left: 4px solid #2e5c87;
         }
         
         .window-badge {
             background: #2e5c87;
             color: white;
-            padding: 0.3em 0.8em;
+            padding: 0.25em 0.625em;
             border-radius: 3px;
-            font-size: 0.8em;
+            font-size: 0.75em;
             display: inline-block;
             margin-right: 0.5em;
         }
         
         .code-snippet {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 1em;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 0.875em;
             border-radius: 4px;
             font-family: 'Courier New', monospace;
-            font-size: 0.9em;
-            margin: 1em 0;
+            font-size: 0.875em;
+            margin: 0.875em 0;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .demo-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2em;
-            margin: 2em 0;
+            gap: 1.5em;
+            margin: 1.5em 0;
         }
         
         .window-controls {
@@ -82,28 +77,11 @@
             margin-top: 1em;
             display: none;
         }
-    </style>
-</head>
-<body class="landing">
-<div id="page-wrapper">
+</style>
+HTML;
 
-<header id="header">
-    <h1><a href="index.php">Learn With Psudo</a></h1>
-    <nav id="nav">
-        <ul>
-            <li class="special">
-                <a href="#menu" class="menuToggle"><span>Menu</span></a>
-                <div id="menu">
-                    <ul>
-                        <li><a href="../index.php">Topics</a></li>
-                        <li><a href="https://examples.learnwithpsudo.com/?i=1">Back to Mainpage</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </nav>
-</header>
-
+require_once dirname(__DIR__) . '/includes/header.php';
+?>
 <article id="main">
     <header>
         <h2>Multiple Windows & Tabs Demo</h2>
@@ -144,8 +122,8 @@
             </div>
 
             <!-- Section 2: Real-World Use Cases -->
-            <div class="window-demo">
-                <h3>Real-World Multi-Window Scenarios</h3>
+            <div class="page-section">
+                <h3>🌍 Real-World Multi-Window Scenarios</h3>
                 
                 <div class="demo-grid">
                     <!-- Simulated OAuth Login -->
@@ -177,8 +155,8 @@
             </div>
 
             <!-- Section 3: Dynamic Delayed Windows -->
-            <div class="window-demo">
-                <h3>Dynamic & Delayed Window Opening</h3>
+            <div class="page-section">
+                <h3>⏱️ Dynamic & Delayed Window Opening</h3>
                 <p>Simulates asynchronous operations opening new windows after a delay</p>
                 
                 <div class="window-controls">
@@ -189,10 +167,10 @@
             </div>
 
             <!-- Instructions -->
-            <div class="box">
-                <h3>Selenium Window Management Instructions</h3>
-                <div class="row">
-                    <div class="col-6 col-12-medium">
+            <div class="page-section">
+                <h3>📋 Selenium Window Management Instructions</h3>
+                <div class="demo-grid">
+                    <div class="feature-card">
                         <h4>Window Handle Methods</h4>
                         <ul>
                             <li><strong>Current Handle:</strong> <code>driver.current_window_handle</code></li>
@@ -200,7 +178,7 @@
                             <li><strong>Switching:</strong> <code>driver.switch_to.window(handle)</code></li>
                         </ul>
                     </div>
-                    <div class="col-6 col-12-medium">
+                    <div class="feature-card">
                         <h4>Best Practices</h4>
                         <ul>
                             <li><strong>Store Parent Handle:</strong> Keep main handle before switching.</li>
@@ -214,30 +192,8 @@
         </div>
     </section>
 </article>
-
-<!-- Footer -->
-<footer id="footer">
-    <ul class="icons">
-        <li><a href="https://www.facebook.com/profile.php?id=61575272247147" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-        <li><a href="https://www.instagram.com/learn_with_psudo/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-        <li><a href="mailto:learnwithpsudo@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-    </ul>
-    <ul class="copyright">
-        <li>&copy; LWS Learn with PSUDO</li><li>Linkedin: <a href="https://www.linkedin.com/in/sudhanshu-sharma/" target="Window">Linkedin</a></li>
-    </ul>
-</footer>
-
-</div>
-
-<!-- Scripts -->
-<script src="../assets/js/jquery.min.js"></script>
-<script src="../assets/js/jquery.scrollex.min.js"></script>
-<script src="../assets/js/jquery.scrolly.min.js"></script>
-<script src="../assets/js/browser.min.js"></script>
-<script src="../assets/js/breakpoints.min.js"></script>
-<script src="../assets/js/util.js"></script>
-<script src="../assets/js/main.js"></script>
-
+<?php
+$extraScripts = <<<'JS'
 <script>
     function openPopupWindow() {
         window.open('child-window.html', 'PopupWindow', 'width=600,height=400,resizable=yes');
@@ -266,5 +222,5 @@
         window.open('child-window.html?tab=3', '_blank');
     }
 </script>
-</body>
-</html>
+JS;
+require_once dirname(__DIR__) . '/includes/footer.php';

@@ -1,33 +1,12 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Child Window 1 - Selenium Practice</title>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" href="../images/logo.ico" />
-    <link rel="icon" href="../images/logo.ico" type="image/x-icon"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-</head>
-<body class="landing">
-<div id="page-wrapper">
+<?php
+$lwsBase = '../';
+$pageTitle = 'Child Window 1 - Selenium Practice';
+$pageCanonical = 'https://examples.learnwithpsudo.com/pages/windowChild1.php';
+$navMenuExtra = '<li><a href="windowsDemo.php">Back to Windows Demo</a></li>';
 
-<header id="header">
-    <h1><a href="index.php">Learn With Psudo</a></h1>
-    <nav id="nav">
-        <ul>
-            <li class="special">
-                <a href="#menu" class="menuToggle"><span>Menu</span></a>
-                <div id="menu">
-                    <ul>
-                        <li><a href="../index.php">Topics</a></li>
-                        <li><a href="windowsDemo.php">Back to Windows Demo</a></li>
-                    </ul>
-                </div>
-            </li>
-        </ul>
-    </nav>
-</header>
+
+require_once dirname(__DIR__) . '/includes/header.php';
+?>
 <article id="main">
     <header>
         <h2>Child Window 1</h2>
@@ -100,32 +79,13 @@
         </div>
     </section>
 </article>
-
-<footer id="footer">
-    <ul class="icons">
-        <li><a href="https://www.facebook.com/profile.php?id=61575272247147" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-        <li><a href="https://www.instagram.com/learn_with_psudo/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-        <li><a href="mailto:learnwithpsudo@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-    </ul>
-    <ul class="copyright">
-        <li>&copy; LWS Learn with PSUDO</li><li>LinkedIn: <a href="https://www.linkedin.com/in/sudhanshu-sharma/" target="_blank">LinkedIn</a></li>
-    </ul>
-</footer>
-
-</div>
-<!-- Scripts -->
-<script src="../assets/js/jquery.min.js"></script>
-<script src="../assets/js/jquery.scrollex.min.js"></script>
-<script src="../assets/js/jquery.scrolly.min.js"></script>
-<script src="../assets/js/browser.min.js"></script>
-<script src="../assets/js/breakpoints.min.js"></script>
-<script src="../assets/js/util.js"></script>
-<script src="../assets/js/main.js"></script>
+<?php
+$extraScripts = <<<'JS'
 <script>
 document.getElementById('uniqueId').textContent = 'CW1_' + Date.now();
 function handleClick() {
     document.getElementById('clickStatus').textContent = 'Status: Button clicked at ' + new Date().toLocaleTimeString();
 }
 </script>
-</body>
-</html>
+JS;
+require_once dirname(__DIR__) . '/includes/footer.php';
