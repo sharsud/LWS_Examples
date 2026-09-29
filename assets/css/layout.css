@@ -243,3 +243,20 @@ footer a {
 	border-bottom: 0 !important;
 	text-decoration: none;
 }
+
+/* Shared header/footer buttons: strip the template's global <button> chrome
+   (inset outline box, forced height/letter-spacing/uppercase) from the
+   site-wide components embedded in the lab pages. */
+#mainHeader button,
+footer button,
+#talkToPsudoPopup button {
+	box-shadow: none !important;
+	height: auto;
+	line-height: inherit;
+	letter-spacing: inherit;
+	text-transform: none;
+	max-width: none;
+	white-space: normal;
+	overflow: visible;
+	margin: 0;
+}
