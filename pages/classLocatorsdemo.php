@@ -1,7 +1,7 @@
 <?php
 $lwsBase = '../';
 $pageTitle = 'CSS Locator Practice - Learn with Psudo';
-$pageCanonical = 'https://examples.learnwithpsudo.com/pages/classLocatorsdemo.php';
+$pageCanonical = 'https://www.learnwithpsudo.com/examples/pages/classLocatorsdemo.php';
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 <article id="main">

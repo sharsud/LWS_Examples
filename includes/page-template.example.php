@@ -5,7 +5,7 @@
  */
 $lwsBase = '../';
 $pageTitle = 'Demo title - Learn with Psudo';
-$pageCanonical = 'https://examples.learnwithpsudo.com/pages/your-page.php';
+$pageCanonical = 'https://www.learnwithpsudo.com/examples/pages/your-page.php';
 $extraHead = ''; // optional <style> or <script> for this page only
 $navMenuExtra = ''; // optional extra <li> items inside #menu
 

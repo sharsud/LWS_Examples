@@ -1,7 +1,7 @@
 <?php
 $lwsBase = '../';
-$pageTitle = 'Login - Learn with Psudo | Python, Automation & Selenium Tutorials';
-$pageCanonical = 'https://examples.learnwithpsudo.com/pages/relativeLoc.php';
+$pageTitle = 'Relative Locators Practice - Learn with Psudo';
+$pageCanonical = 'https://www.learnwithpsudo.com/examples/pages/relativeLoc.php';
 
 $extraHead = <<<'HTML'
 <style>

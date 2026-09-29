@@ -1,7 +1,7 @@
 <?php
 $lwsBase = '../';
 $pageTitle = 'Child Window 1 - Selenium Practice';
-$pageCanonical = 'https://examples.learnwithpsudo.com/pages/windowChild1.php';
+$pageCanonical = 'https://www.learnwithpsudo.com/examples/pages/windowChild1.php';
 $navMenuExtra = '<li><a href="windowsDemo.php">Back to Windows Demo</a></li>';
 
 

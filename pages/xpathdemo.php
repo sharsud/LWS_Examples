@@ -1,7 +1,7 @@
 <?php
 $lwsBase = '../';
-$pageTitle = 'XPath Practice - Learn with Psuto';
-$pageCanonical = 'https://examples.learnwithpsudo.com/pages/xpathdemo.php';
+$pageTitle = 'XPath Practice - Learn with Psudo';
+$pageCanonical = 'https://www.learnwithpsudo.com/examples/pages/xpathdemo.php';
 
 
 require_once dirname(__DIR__) . '/includes/header.php';
@@ -262,7 +262,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
                 <h3>🔗 References</h3>
                 <ul>
                     <li><a href="https://www.selenium.dev/documentation/webdriver/elements/locators/" target="_blank" rel="noopener noreferrer">Selenium Locator Strategies</a></li>
-                    <li><a href="https://blog.learnwithpsudo.com/2026/01/understanding-the-dom-and-inspecting-elements" target="_blank" rel="noopener noreferrer">Learn With Psudo – XPath Tutorials</a></li>
+                    <li><a href="https://www.learnwithpsudo.com/blog/" target="_blank" rel="noopener noreferrer">Learn With Psudo – XPath Tutorials</a></li>
                 </ul>
             </div>
 

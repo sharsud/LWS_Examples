@@ -1,7 +1,7 @@
 <?php
 $lwsBase = '../';
 $pageTitle = 'Child Window 3 - Data Display';
-$pageCanonical = 'https://examples.learnwithpsudo.com/pages/windowChild3.php';
+$pageCanonical = 'https://www.learnwithpsudo.com/examples/pages/windowChild3.php';
 $navMenuExtra = '<li><a href="windowsDemo.php">Back to Windows Demo</a></li>';
 
 

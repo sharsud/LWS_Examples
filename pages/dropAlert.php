@@ -1,7 +1,7 @@
 <?php
 $lwsBase = '../';
 $pageTitle = 'Dropdowns & Alerts Demo - Learn with Psudo';
-$pageCanonical = 'https://examples.learnwithpsudo.com/pages/dropAlert.php';
+$pageCanonical = 'https://www.learnwithpsudo.com/examples/pages/dropAlert.php';
 
 $extraHead = <<<'HTML'
 <style>

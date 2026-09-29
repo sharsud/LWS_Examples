@@ -1,7 +1,7 @@
 <?php
 $lwsBase = '../';
 $pageTitle = 'Selenium Interaction Demo - Learn with Psudo';
-$pageCanonical = 'https://examples.learnwithpsudo.com/pages/BrNavBasic.php';
+$pageCanonical = 'https://www.learnwithpsudo.com/examples/pages/BrNavBasic.php';
 
 $extraHead = <<<'HTML'
 <style>

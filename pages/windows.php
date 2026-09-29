@@ -1,7 +1,7 @@
 <?php
 $lwsBase = '../';
 $pageTitle = 'Multiple Windows & Tabs Demo - Learn with Psudo';
-$pageCanonical = 'https://examples.learnwithpsudo.com/pages/windows.php';
+$pageCanonical = 'https://www.learnwithpsudo.com/examples/pages/windows.php';
 
 $extraHead = <<<'HTML'
 <style>

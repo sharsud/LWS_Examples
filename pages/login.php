@@ -1,7 +1,7 @@
 <?php
 $lwsBase = '../';
 $pageTitle = 'Login - Learn with Psudo | Python, Automation & Selenium Tutorials';
-$pageCanonical = 'https://examples.learnwithpsudo.com/pages/login.php';
+$pageCanonical = 'https://www.learnwithpsudo.com/examples/pages/login.php';
 require_once dirname(__DIR__) . '/includes/header.php';
 ?>
         <article id="main">

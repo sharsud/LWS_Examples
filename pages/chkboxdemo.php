@@ -1,7 +1,7 @@
 <?php
 $lwsBase = '../';
 $pageTitle = 'Checkbox & Radio Demo - Learn with Psudo | Selenium Tutorials';
-$pageCanonical = 'https://examples.learnwithpsudo.com/pages/chkboxdemo.php';
+$pageCanonical = 'https://www.learnwithpsudo.com/examples/pages/chkboxdemo.php';
 
 
 require_once dirname(__DIR__) . '/includes/header.php';

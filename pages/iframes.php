@@ -1,7 +1,7 @@
 <?php
 $lwsBase = '../';
 $pageTitle = 'iFrames & Frames Demo - Learn with Psudo';
-$pageCanonical = 'https://examples.learnwithpsudo.com/pages/iframes.php';
+$pageCanonical = 'https://www.learnwithpsudo.com/examples/pages/iframes.php';
 
 $extraHead = <<<'HTML'
 <style>

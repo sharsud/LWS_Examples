@@ -1,7 +1,7 @@
 <?php
 $lwsBase = '../';
-$pageTitle = 'Windows & Tabs Practice - Learn with Psudo';
-$pageCanonical = 'https://examples.learnwithpsudo.com/pages/mouseKey.php';
+$pageTitle = 'Mouse & Keyboard Actions Practice - Learn with Psudo';
+$pageCanonical = 'https://www.learnwithpsudo.com/examples/pages/mouseKey.php';
 
 $extraHead = <<<'HTML'
 <style>

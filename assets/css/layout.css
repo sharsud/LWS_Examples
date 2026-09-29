@@ -68,33 +68,96 @@ body {
 	filter: invert(0.35);
 }
 
+/* Practice page hero header — mirrors the homepage #tour-hero look */
 #main > header {
-	padding: 7.5rem 1.5rem 3.5rem !important;
+	position: relative;
+	overflow: hidden;
+	padding: 4.5rem 1.5rem 3rem !important;
+	background: transparent !important;
 	background-image: none !important;
-	background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 48%, #0c4a6e 100%) !important;
+	border-bottom: 1px solid rgba(226, 232, 240, 0.8);
 	text-align: center;
+}
+
+#main > header:before {
+	content: "";
+	position: absolute;
+	top: -70%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 760px;
+	height: 380px;
+	z-index: 0;
+	pointer-events: none;
+	border-radius: 50%;
+	background: radial-gradient(closest-side, rgba(186, 230, 253, 0.6), rgba(199, 210, 254, 0.45) 55%, rgba(233, 213, 255, 0.35));
+	filter: blur(70px);
+}
+
+#main > header > * {
+	position: relative;
+	z-index: 1;
 }
 
 #main > header h2,
 #main > header p {
-	color: #fff !important;
+	color: #0f172a !important;
 }
 
 #main > header h2 {
 	letter-spacing: -0.02em;
 	text-transform: none;
+	font-size: clamp(1.9rem, 5vw, 2.6rem) !important;
+	font-weight: 800 !important;
+	line-height: 1.15;
+	max-width: 44rem;
+	margin: 0 auto 0.7em auto !important;
+}
+
+#main > header h2:before {
+	content: "Practice Lab";
+	display: block;
+	width: max-content;
+	margin: 0 auto 1rem auto;
+	padding: 0.35rem 0.9rem;
+	border-radius: 9999px;
+	font-size: 0.7rem !important;
+	font-weight: 700 !important;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: #0369a1 !important;
+	background: rgba(224, 242, 254, 0.9);
+	border: 1px solid rgba(186, 230, 253, 0.95);
+}
+
+#main > header h2:after {
+	content: "";
+	display: block;
+	width: 76px;
+	height: 4px;
+	margin: 1.1rem auto 0;
+	border-radius: 9999px;
+	background: linear-gradient(90deg, #0284c7, #6366f1, #7c3aed);
 }
 
 #main > header p {
-	letter-spacing: 0.14em;
-	text-transform: uppercase;
-	color: #c7d2fe !important;
-	font-size: 0.8rem;
+	letter-spacing: 0.02em;
+	text-transform: none;
+	color: #475569 !important;
+	font-size: 1.05rem;
+	line-height: 1.7;
+	max-width: 42rem;
+	margin: 0 auto;
 }
 
 .wrapper.style5 {
 	background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%) !important;
 	color: #334155 !important;
+	padding: 0 0 3.5rem 0;
+}
+
+.examples-home .wrapper.style5 {
+	padding: 2.5rem 0 3.5rem 0;
 }
 
 .wrapper.style5 .inner {
@@ -160,15 +223,23 @@ body {
 }
 
 @media screen and (max-width: 736px) {
-	.lws-brand-tag {
-		display: none;
+		.lws-brand-tag {
+			display: none;
+		}
+
+		#main > header {
+			padding: 3rem 1.25rem 2.25rem !important;
+		}
+
+		.wrapper.style5 .inner {
+			padding: 1.25rem;
+		}
 	}
 
-	#main > header {
-		padding: 6rem 1.25rem 2.5rem !important;
-	}
-
-	.wrapper.style5 .inner {
-		padding: 1.25rem;
-	}
+/* Shared nav + footer links: remove the Dimension dotted underline */
+#mainHeader a,
+#mobileMenu a,
+footer a {
+	border-bottom: 0 !important;
+	text-decoration: none;
 }

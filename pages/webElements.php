@@ -1,7 +1,7 @@
 <?php
 $lwsBase = '../';
 $pageTitle = 'Registration - Learn with Psudo | Python, Automation & Selenium Tutorials';
-$pageCanonical = 'https://examples.learnwithpsudo.com/pages/webElements.php';
+$pageCanonical = 'https://www.learnwithpsudo.com/examples/pages/webElements.php';
 $extraHead = <<<'HTML'
     <script>
     function openPopup(name) {
@@ -20,8 +20,8 @@ require_once dirname(__DIR__) . '/includes/header.php';
 ?>
 	<article id="main">
 		<header>
-			<h2>Selenium Demo </h2>
-			<p>Use this as a practice area for web elements interactionss</p>
+			<h2>Web Elements Practice Lab</h2>
+			<p>A registration form with text fields, select dropdowns, radio buttons, checkboxes, file inputs, and links for practicing web element interactions.</p>
 		</header>
 		<section class="wrapper style5">
 			<div class="inner">
@@ -152,7 +152,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
 
 					<!-- Login Link -->
 					<p>Already registered? 
-					  <a href="https://examples.learnwithpsudo.com/pages/login.php" id="loginLink">Click here to log in</a> OR <a href="https://examples.learnwithpsudo.com/pages/login.php" id="loginLink2">Log In</a>
+					  <a href="https://www.learnwithpsudo.com/examples/pages/login.php" id="loginLink">Click here to log in</a> OR <a href="https://www.learnwithpsudo.com/examples/pages/login.php" id="loginLink2">Log In</a>
 					</p>
 
 				</form>

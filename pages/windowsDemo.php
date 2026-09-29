@@ -1,7 +1,7 @@
 <?php
 $lwsBase = '../';
 $pageTitle = 'Windows & Tabs Practice - Learn with Psudo';
-$pageCanonical = 'https://examples.learnwithpsudo.com/pages/windowsDemo.php';
+$pageCanonical = 'https://www.learnwithpsudo.com/examples/pages/windowsDemo.php';
 
 
 require_once dirname(__DIR__) . '/includes/header.php';
@@ -36,13 +36,15 @@ require_once dirname(__DIR__) . '/includes/header.php';
                             <a href="windowChild1.php" target="_blank" id="linkNewTab1" class="button small">Open Child Window 1</a>
                         </div>
 						<div class="flex ">
-                            <a href="windowChild2.php" target="_blank" id="linkNewTab1" class="button small">Open Child Window 2</a>
+                            <a href="windowChild2.php" target="_blank" id="linkNewTab2" class="button small">Open Child Window 2</a>
                         </div>
 						<div class="flex ">
-                            <a href="windowChild3.php" target="_blank" id="linkNewTab1" class="button small">Open Child Window 3</a>
+                            <a href="windowChild3.php" target="_blank" id="linkNewTab3" class="button small">Open Child Window 3</a>
                         </div>
                         <div class="code-info">
-                            <code>//a[@id='linkNewTab1']  # Click to open new tab</code>
+                            <code>//a[@id='linkNewTab1']  # Open child window 1</code><br>
+                            <code>//a[@id='linkNewTab2']  # Open child window 2</code><br>
+                            <code>//a[@id='linkNewTab3']  # Open child window 3</code>
                         </div>
                     </div>
 
@@ -272,7 +274,7 @@ require_once dirname(__DIR__) . '/includes/header.php';
                     <code>from selenium.webdriver.common.by import By</code><br>
                     <code>from selenium.webdriver.support.ui import WebDriverWait</code><br><br>
                     <code>driver = webdriver.Chrome()</code><br>
-                    <code>driver.get("https://examples.learnwithpsudo.com/pages/windowsDemo.php")</code><br><br>
+                    <code>driver.get("https://www.learnwithpsudo.com/examples/pages/windowsDemo.php")</code><br><br>
                     <code># Step 1: Store parent handle</code><br>
                     <code>parent = driver.current_window_handle</code><br><br>
                     <code># Step 2: Click to open new window</code><br>

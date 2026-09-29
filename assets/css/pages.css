@@ -352,3 +352,50 @@ code {
         grid-template-columns: 1fr;
     }
 }
+
+/* Form grid: honor the half/quarter splits used by the demo pages */
+.fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.25rem;
+}
+
+.fields > .field {
+    flex: 1 1 100%;
+    min-width: 0;
+}
+
+.fields > .field.half {
+    flex: 1 1 calc(50% - 1.25rem);
+}
+
+.fields > .field.quarter {
+    flex: 1 1 calc(25% - 1.25rem);
+}
+
+/* Select dropdowns: render exactly one chevron, sized to its container */
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    max-width: 100%;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1.1em;
+    padding-right: 2.5rem;
+    cursor: pointer;
+}
+
+select[multiple] {
+    background-image: none;
+    padding-right: 0.875rem;
+}
+
+@media screen and (max-width: 736px) {
+    .fields > .field.half,
+    .fields > .field.quarter {
+        flex: 1 1 100%;
+    }
+}
