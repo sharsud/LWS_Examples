@@ -222,6 +222,7 @@ require_once __DIR__ . '/includes/header.php';
                                 <span class="inline-flex items-center rounded-md bg-indigo-50 px-2 py-0.5 text-[11px] font-semibold text-indigo-700 ring-1 ring-inset ring-indigo-200">actions</span>
                             </div>
                         </a>
+
                     </div>
 
 					<div class="examples-section-head mt-16">
