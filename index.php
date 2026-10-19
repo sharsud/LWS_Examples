@@ -1,7 +1,7 @@
 <?php
 $lwsBase = '';
 $isHome = true;
-$pageTitle = 'Learn with Psudo | Python, Automation & Selenium Tutorials';
+$pageTitle = 'Selenium Practice Labs';
 $pageCanonical = 'https://www.learnwithpsudo.com/examples/';
 $homeHref = 'index.php';
 require_once __DIR__ . '/includes/header.php';

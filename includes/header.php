@@ -2,7 +2,33 @@
 if (!isset($lwsBase)) {
     $lwsBase = '';
 }
+// Site-wide page title helper: every <title> renders as "LWS || <Page Name>".
+// Strips pre-existing brand tokens so the result is never double-branded.
+if (!function_exists('lws_page_title')) {
+    function lws_page_title($title, $fallback = 'Learn With Psudo') {
+        $t = trim((string) $title);
+        // Drop a trailing " - Learn With Psudo <tagline>" / " | Learn With Psudo
+        // <tagline>" and a leading "Learn With Psudo | <tagline>" prefix, so titles
+        // that embed the brand anywhere collapse down to just the page name.
+        $t = preg_replace('/\s*[-|]\s*Learn\s*With\s*Psudo\b.*$/iu', '', $t);
+        $t = preg_replace('/^Learn\s*With\s*Psudo\b\s*[|:\-]?\s*/iu', '', $t);
+        // Drop leftover short-brand tokens (LWS || / LWS - / | LWS).
+        $t = preg_replace('/^\s*LWS\s*(?:\|\||-)\s*/iu', '', $t);
+        $t = preg_replace('/\s*(?:\|\||\|)\s*LWS\s*$/iu', '', $t);
+        // Trim dangling separators left behind by the removals.
+        $t = preg_replace('/^(?:\s*[-|\x{2013}\x{2014}]+\s*)+/u', '', $t);
+        $t = preg_replace('/(?:\s*[-|\x{2013}\x{2014}]+\s*)+$/u', '', $t);
+        $t = trim($t);
+        if ($t === '') {
+            $t = $fallback;
+        }
+        return 'LWS || ' . $t;
+    }
+}
 $pageTitle = $pageTitle ?? 'Learn with Psudo | Python, Automation & Selenium Tutorials (Practice Labs)';
+// Normalise to the site-wide "LWS || Page Name" title.
+$pageTitle = lws_page_title($pageTitle, 'Practice Labs');
+$pageRobots = $pageRobots ?? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
 $pageCanonical = $pageCanonical ?? '';
 $bodyClass = $bodyClass ?? 'landing is-preload bg-slate-50 text-slate-900 antialiased';
 $extraHead = $extraHead ?? '';
@@ -16,6 +42,7 @@ $navMenuExtra = $navMenuExtra ?? '';
     <meta charset="utf-8" />
     <title><?php echo htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="robots" content="<?php echo htmlspecialchars($pageRobots, ENT_QUOTES, 'UTF-8'); ?>" />
     <link rel="shortcut icon" href="<?php echo htmlspecialchars($lwsBase, ENT_QUOTES, 'UTF-8'); ?>images/logo.ico" />
     <link rel="icon" href="<?php echo htmlspecialchars($lwsBase, ENT_QUOTES, 'UTF-8'); ?>images/logo.ico" type="image/x-icon"/>
     <meta name="description" content="Hands-on Selenium practice labs: XPath, CSS selectors, relative locators, frames, windows, mouse and keyboard actions. Open real pages and see the code that drives them." />
