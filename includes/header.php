@@ -39,6 +39,9 @@ $navMenuExtra = $navMenuExtra ?? '';
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3831096482228208"
+    crossorigin="anonymous"></script>
     <meta charset="utf-8" />
     <title><?php echo htmlspecialchars($pageTitle, ENT_QUOTES, 'UTF-8'); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
